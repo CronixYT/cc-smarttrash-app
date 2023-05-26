@@ -11,8 +11,6 @@ const findUserAndUpdate = (res, req, trash_data) =>
         user_trash_temp = "[]";
       user_trash_temp = JSON.parse(user_trash_temp);
       let new_trash_data = [...user_trash_temp, ...trash_data];
-      console.log(user_trash_temp, trash_data);
-      console.log(new_trash_data);
       new_trash_data = JSON.stringify(new_trash_data);
       let query2 = `UPDATE users SET trash_temp = '${new_trash_data}' WHERE id = '${req.session.user.id}'`;
       db.query(query2, (err, result2) => {
