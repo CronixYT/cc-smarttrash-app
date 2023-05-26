@@ -41,7 +41,7 @@ router.post("/scan/add", function (req, res, next) {
   if (!req.session.user) {
     return res.redirect("/login");
   }
-  let trash_data = JSON.stringify(req.body);
+  let trash_data = req.body;
   trash_temp.findUserAndUpdate(res, req, trash_data);
 });
 

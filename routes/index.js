@@ -27,7 +27,7 @@ router.post("/signup", function (req, res, next) {
   insertUser(username, password);
   res.send({
     status: "success",
-    message: "Successfuly Signed up",
+    message: "Successfully Signed up",
     data: { username, password },
   });
   // REDIRECT TO LOGIN PAGE

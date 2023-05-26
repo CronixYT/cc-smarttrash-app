@@ -7,6 +7,8 @@ const gcs = new Storage({
   keyFilename: "./service-account.json",
   projectId: "PROJECTID",
 });
+// fs
+const fs = require("fs");
 
 const bucket = gcs.bucket("qrcode-test-dev");
 

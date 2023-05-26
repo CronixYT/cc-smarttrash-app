@@ -5,8 +5,6 @@ const { v4: uuidv4 } = require("uuid");
 var qrCode = require("./utils/qrCode");
 // gcs
 var gcs = require("./utils/cloudbucket");
-// fs
-const fs = require("fs");
 
 router.get("/display/:id", function (req, res, next) {
   let { id: qrId } = req.params;
